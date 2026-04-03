@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-primary: #0E7C7B;
+  --color-primary-light: #14B8A6;
+  --color-accent: #D97706;
+  --color-accent-light: #FBBF24;
+  --color-water: #38BDF8;
+  --color-bio: #22C55E;
+  --color-dark: #0B1120;
+  --color-card: #111C30;
+  --color-background: #ffffff;
+  --color-foreground: #0B1120;
+  --font-heading: "Playfair Display", Georgia, serif;
+  --font-body: "DM Sans", system-ui, sans-serif;
+  --font-data: "JetBrains Mono", ui-monospace, monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-body);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+/* Utility for data/KPI displays */
+.font-data {
+  font-family: var(--font-data);
+}
