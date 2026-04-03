@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import {
   Droplets,
   Sun,
@@ -57,16 +58,28 @@ export default function ProductPage() {
       {/* Hero */}
       <section className="bg-dark text-white py-20 md:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl">
-            <Badge variant="primary" className="mb-4">Product</Badge>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
-              {BRAND.product}
-            </h1>
-            <p className="mt-4 text-xl text-gray-300">
-              India&apos;s first 100% indigenous containerized sewage treatment
-              plant. Factory-built. Solar-powered. IoT-monitored. Deployable in
-              48 hours.
-            </p>
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <Badge variant="primary" className="mb-4">Product</Badge>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
+                {BRAND.product}
+              </h1>
+              <p className="mt-4 text-xl text-gray-300">
+                India&apos;s first 100% indigenous containerized sewage treatment
+                plant. Factory-built. Solar-powered. IoT-monitored. Deployable in
+                48 hours.
+              </p>
+            </div>
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+              <Image
+                src="/images/jalbox-transport.jpg"
+                alt="JalBox 25 containerized STPs with solar panels on transport trucks"
+                width={800}
+                height={500}
+                className="w-full h-auto object-cover"
+                priority
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -166,6 +179,24 @@ export default function ProductPage() {
           </SectionDescription>
         </SectionHeader>
 
+        {/* Schematic Diagram */}
+        <div className="mb-12 rounded-2xl overflow-hidden border border-white/10">
+          <div className="bg-white p-2">
+            <Image
+              src="/images/jalbox-schematic.jpg"
+              alt="JalBox cutaway schematic: Screening Chamber, Anaerobic Baffled Reactor, MBBR with bio-media and fine-bubble diffusers, Lamella Plate Clarifier, UV Disinfection Chamber — solar panels on top with biogas collection dome"
+              width={1400}
+              height={700}
+              className="w-full h-auto"
+            />
+          </div>
+          <div className="p-4 md:p-6 bg-card border-t border-white/10">
+            <p className="text-sm text-gray-300 text-center">
+              <strong className="text-white">JalBox™ Internal Layout:</strong> Every component is factory-installed and tested before dispatch. The entire treatment train fits within a standard 20ft shipping container.
+            </p>
+          </div>
+        </div>
+
         <div className="max-w-4xl mx-auto">
           {TREATMENT_STAGES.map((stage, i) => (
             <div
@@ -250,6 +281,46 @@ export default function ProductPage() {
               </div>
             </div>
           ))}
+        </div>
+      </Section>
+
+      {/* Deployment Showcase */}
+      <Section>
+        <SectionHeader>
+          <Badge variant="success" className="mb-4">In the Field</Badge>
+          <SectionTitle>JalBox™ in Action</SectionTitle>
+          <SectionDescription>
+            From factory to village in days — here&apos;s what a deployed
+            JalBox looks like serving a real community.
+          </SectionDescription>
+        </SectionHeader>
+
+        <div className="rounded-2xl overflow-hidden shadow-lg">
+          <div className="relative">
+            <Image
+              src="/images/jalbox-village.jpg"
+              alt="JalBox deployed in a rural Indian village with Jal Mitra operating IoT panel, biogas bag, and women collecting treated water"
+              width={1200}
+              height={600}
+              className="w-full h-64 sm:h-80 md:h-[500px] object-cover"
+            />
+            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-dark/90 via-dark/50 to-transparent p-6 md:p-10">
+              <div className="grid sm:grid-cols-3 gap-6 max-w-3xl">
+                <div>
+                  <p className="text-accent-light font-data font-bold text-lg">Solar Powered</p>
+                  <p className="text-sm text-gray-200">Rooftop panels run the entire system off-grid</p>
+                </div>
+                <div>
+                  <p className="text-accent-light font-data font-bold text-lg">IoT Monitored</p>
+                  <p className="text-sm text-gray-200">Jal Mitra operates via touchscreen control panel</p>
+                </div>
+                <div>
+                  <p className="text-accent-light font-data font-bold text-lg">Biogas Capture</p>
+                  <p className="text-sm text-gray-200">Black biogas bag stores methane for cooking fuel</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </Section>
 

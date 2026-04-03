@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import {
   Droplets,
   Sun,
@@ -31,67 +32,100 @@ export default function HomePage() {
           <div className="absolute bottom-20 right-10 w-96 h-96 bg-water rounded-full blur-[128px]" />
         </div>
 
-        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24 md:py-32 lg:py-40">
-          <div className="max-w-4xl">
-            <Badge variant="primary" className="mb-6 text-sm">
-              <Droplets className="h-3 w-3 mr-1" />
-              India&apos;s First 100% Indigenous Containerized STP
-            </Badge>
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 md:py-28 lg:py-36">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <Badge variant="primary" className="mb-6 text-sm">
+                <Droplets className="h-3 w-3 mr-1" />
+                India&apos;s First 100% Indigenous Containerized STP
+              </Badge>
 
-            <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight leading-[1.1]">
-              <span className="text-primary-light italic">
-                {BRAND.tagline}
-              </span>
-              <br />
-              <span className="text-white mt-2 block">
-                {BRAND.taglineEnglish}
-              </span>
-            </h1>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1]">
+                <span className="text-primary-light italic">
+                  {BRAND.tagline}
+                </span>
+                <br />
+                <span className="text-white mt-2 block">
+                  {BRAND.taglineEnglish}
+                </span>
+              </h1>
 
-            <p className="mt-6 text-lg md:text-xl text-gray-300 max-w-2xl leading-relaxed">
-              {BRAND.product} — containerized, solar-powered, IoT-monitored
-              sewage treatment plants. Built with 100% Indian-sourced materials
-              through our {BRAND.innovation} design. Deployable in 48 hours.
-              Monitored from anywhere.
-            </p>
+              <p className="mt-6 text-lg md:text-xl text-gray-300 max-w-2xl leading-relaxed">
+                {BRAND.product} — containerized, solar-powered, IoT-monitored
+                sewage treatment plants. Built with 100% Indian-sourced materials
+                through our {BRAND.innovation} design. Deployable in 48 hours.
+                Monitored from anywhere.
+              </p>
 
-            <div className="mt-10 flex flex-col sm:flex-row gap-4">
-              <Link href="/product">
-                <Button size="lg" className="w-full sm:w-auto">
-                  Explore JalBox™
-                  <ArrowRight className="h-5 w-5" />
-                </Button>
-              </Link>
-              <Link href="/invest">
-                <Button variant="accent" size="lg" className="w-full sm:w-auto">
-                  Invest in Clean Water
-                  <TrendingUp className="h-5 w-5" />
-                </Button>
-              </Link>
+              <div className="mt-10 flex flex-col sm:flex-row gap-4">
+                <Link href="/product">
+                  <Button size="lg" className="w-full sm:w-auto">
+                    Explore JalBox™
+                    <ArrowRight className="h-5 w-5" />
+                  </Button>
+                </Link>
+                <Link href="/invest">
+                  <Button variant="accent" size="lg" className="w-full sm:w-auto">
+                    Invest in Clean Water
+                    <TrendingUp className="h-5 w-5" />
+                  </Button>
+                </Link>
+              </div>
             </div>
 
-            {/* Quick Stats */}
-            <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6">
-              {[
-                { label: "Deployment Time", value: "48 hrs", icon: Zap },
-                { label: "Cost Reduction", value: "60%", icon: TrendingUp },
-                { label: "Energy", value: "Solar", icon: Sun },
-                { label: "Monitoring", value: "Real-time", icon: Wifi },
-              ].map((stat) => (
-                <div key={stat.label} className="text-center md:text-left">
-                  <div className="flex items-center justify-center md:justify-start gap-2 mb-1">
-                    <stat.icon className="h-4 w-4 text-accent-light" />
-                    <span className="font-data text-2xl md:text-3xl font-bold text-white">
-                      {stat.value}
-                    </span>
-                  </div>
-                  <p className="text-sm text-gray-400">{stat.label}</p>
+            {/* Hero Image — JalBox transport */}
+            <div className="relative hidden lg:block">
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-primary/20">
+                <Image
+                  src="/images/jalbox-transport.jpg"
+                  alt="JalBox 25 containerized STPs with solar panels being transported on trucks through rural India"
+                  width={800}
+                  height={500}
+                  className="w-full h-auto object-cover"
+                  priority
+                />
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-dark/80 to-transparent p-6">
+                  <p className="text-sm font-medium text-white">
+                    JalBox 25 units en route to deployment — solar panels pre-installed
+                  </p>
                 </div>
-              ))}
+              </div>
             </div>
+          </div>
+
+          {/* Quick Stats */}
+          <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6">
+            {[
+              { label: "Deployment Time", value: "48 hrs", icon: Zap },
+              { label: "Cost Reduction", value: "60%", icon: TrendingUp },
+              { label: "Energy", value: "Solar", icon: Sun },
+              { label: "Monitoring", value: "Real-time", icon: Wifi },
+            ].map((stat) => (
+              <div key={stat.label} className="text-center md:text-left">
+                <div className="flex items-center justify-center md:justify-start gap-2 mb-1">
+                  <stat.icon className="h-4 w-4 text-accent-light" />
+                  <span className="font-data text-2xl md:text-3xl font-bold text-white">
+                    {stat.value}
+                  </span>
+                </div>
+                <p className="text-sm text-gray-400">{stat.label}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
+
+      {/* Mobile Hero Image (shown only on mobile/tablet) */}
+      <div className="lg:hidden relative">
+        <Image
+          src="/images/jalbox-transport.jpg"
+          alt="JalBox 25 containerized STPs with solar panels being transported on trucks through rural India"
+          width={800}
+          height={500}
+          className="w-full h-auto"
+          priority
+        />
+      </div>
 
       {/* Crisis Section */}
       <Section variant="light">
@@ -145,7 +179,7 @@ export default function HomePage() {
         </div>
       </Section>
 
-      {/* Solution Section */}
+      {/* Solution Section with Village Image */}
       <Section>
         <SectionHeader>
           <Badge variant="primary" className="mb-4">The Solution</Badge>
@@ -156,6 +190,32 @@ export default function HomePage() {
             all built with 100% Indian materials.
           </SectionDescription>
         </SectionHeader>
+
+        {/* Village deployment showcase */}
+        <div className="mb-16 rounded-2xl overflow-hidden shadow-lg">
+          <div className="relative">
+            <Image
+              src="/images/jalbox-village.jpg"
+              alt="JalBox deployed in a rural Indian village — Jal Mitra operating the IoT control panel while community members collect treated water"
+              width={1200}
+              height={600}
+              className="w-full h-64 sm:h-80 md:h-[480px] object-cover"
+            />
+            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-dark/90 via-dark/50 to-transparent p-6 md:p-10">
+              <div className="max-w-2xl">
+                <Badge variant="success" className="mb-2">Live Deployment</Badge>
+                <h3 className="text-xl md:text-2xl font-bold text-white mb-2">
+                  JalBox in Action — Serving a Rural Community
+                </h3>
+                <p className="text-sm md:text-base text-gray-200">
+                  A Jal Mitra monitors the IoT dashboard while villagers collect
+                  treated water. Biogas bag visible behind the unit. Solar panels
+                  power the entire system off-grid.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {[
@@ -254,16 +314,32 @@ export default function HomePage() {
         </div>
       </Section>
 
-      {/* Treatment Process */}
+      {/* How It Works — with Schematic */}
       <Section variant="light">
         <SectionHeader>
           <Badge variant="success" className="mb-4">How It Works</Badge>
-          <SectionTitle>6-Stage Treatment Process</SectionTitle>
+          <SectionTitle>Inside the JalBox™</SectionTitle>
           <SectionDescription>
             From raw sewage to reusable water in under 12 hours, using
             biological processes powered by nature and monitored by IoT.
           </SectionDescription>
         </SectionHeader>
+
+        {/* Schematic Image */}
+        <div className="mb-12 rounded-2xl overflow-hidden border border-gray-200 bg-white shadow-sm">
+          <Image
+            src="/images/jalbox-schematic.jpg"
+            alt="JalBox cutaway schematic showing all internal components: screening chamber, anaerobic baffled reactor, MBBR with bio-media, lamella plate clarifier, and UV disinfection chamber"
+            width={1400}
+            height={700}
+            className="w-full h-auto"
+          />
+          <div className="p-4 md:p-6 bg-gray-50 border-t border-gray-100">
+            <p className="text-sm text-gray-600 text-center">
+              <strong>JalBox™ Cross-Section:</strong> Screening Chamber → Anaerobic Baffled Reactor → MBBR (Bio-media) → Lamella Plate Clarifier → UV Disinfection. Solar panels on top, biogas collection dome, and insulated container walls.
+            </p>
+          </div>
+        </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {TREATMENT_STAGES.map((stage) => (
