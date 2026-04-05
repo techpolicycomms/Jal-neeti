@@ -16,7 +16,7 @@ import { Button } from "@/components/ui/button";
 import { Section, SectionHeader, SectionTitle, SectionDescription } from "@/components/ui/section";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { SDG_GOALS } from "@/lib/constants";
+import { SDG_GOALS, BRAND } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Sustainability",
@@ -40,8 +40,9 @@ export default function SustainabilityPage() {
               <span className="text-bio">Climate Action</span>
             </h1>
             <p className="mt-4 text-xl text-gray-300">
-              Every JalBox™ deployed is a step toward cleaner rivers, reduced
+              Every {BRAND.product} deployed is a step toward cleaner rivers, reduced
               methane emissions, green jobs, and a circular water economy.
+              Powered by {BRAND.innovation} indigenous materials and solar energy.
             </p>
           </div>
         </div>
@@ -159,6 +160,49 @@ export default function SustainabilityPage() {
                 <p className="text-sm text-gray-600">{item.use}</p>
               </div>
             </div>
+          ))}
+        </div>
+      </Section>
+
+      {/* Net-Zero Energy */}
+      <Section variant="light">
+        <SectionHeader>
+          <Badge variant="primary" className="mb-4">
+            <Sun className="h-3 w-3 mr-1" />
+            Net-Zero Energy
+          </Badge>
+          <SectionTitle>Solar-Powered. Off-Grid Capable.</SectionTitle>
+          <SectionDescription>
+            {BRAND.product} is designed to operate entirely on renewable energy —
+            combining rooftop solar with biogas co-generation for net-zero operations.
+          </SectionDescription>
+        </SectionHeader>
+
+        <div className="max-w-4xl mx-auto grid sm:grid-cols-3 gap-6">
+          {[
+            {
+              title: "Solar Array",
+              value: "2–5 kW",
+              desc: "Rooftop panels on the container provide primary power for blowers, pumps, and IoT systems.",
+            },
+            {
+              title: "Biogas Co-Gen",
+              value: "0.5–1.5 kW",
+              desc: "Methane captured from the anaerobic reactor is converted to supplementary electricity.",
+            },
+            {
+              title: "Battery Backup",
+              value: "8–12 hrs",
+              desc: "LFP battery bank ensures uninterrupted operation through nights and cloudy days.",
+            },
+          ].map((item) => (
+            <Card key={item.title} className="p-6 text-center">
+              <div className="font-data text-3xl font-bold text-primary mb-2">
+                {item.value}
+              </div>
+              <h3 className="font-bold text-dark mb-1">{item.title}</h3>
+              <p className="text-sm text-gray-600">{item.desc}</p>
+            </Card>
           ))}
         </div>
       </Section>

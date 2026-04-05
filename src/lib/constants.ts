@@ -2,12 +2,18 @@ export const BRAND = {
   company: "Jal Neeti Technologies Pvt Ltd",
   companyHindi: "जल नीति टेक्नोलॉजीज",
   product: "JalBox™",
-  foundation: "Jal Neeti Foundation",
+  foundation: "Ameliore Foundation",
+  foundationDesc: "Section 8 Company focused on education, environmental innovation, and sustainable development",
   innovation: "BioNeer™",
   tagline: "जल की नीति, जीवन की रीति",
   taglineEnglish: "Clean Water. Everywhere.",
-  diasporaCta: "Bring Jal Neeti to Your Village",
+  taglineMeaning: "Water Wisdom, Life's Way",
+  diasporaCta: "Bring Clean Water to Your Village",
+  waasTagline: "You don't buy a sewage plant. You subscribe to clean water.",
   domain: "jalneeti.in",
+  founderName: "Rahul Jha",
+  founderLinkedIn: "linkedin.com/in/r-jha",
+  email: "rahul@jalneeti.in",
 } as const;
 
 export const NAV_LINKS = [
@@ -15,101 +21,224 @@ export const NAV_LINKS = [
   { href: "/product", label: "Product" },
   { href: "/sustainability", label: "Sustainability" },
   { href: "/about", label: "About" },
+  { href: "/government", label: "Government" },
   { href: "/invest", label: "Invest" },
   { href: "/transparency", label: "Transparency" },
+  { href: "/challenge", label: "Challenge 2026" },
   { href: "/careers", label: "Careers" },
   { href: "/contact", label: "Contact" },
 ] as const;
 
 export const JALBOX_MODELS = [
   {
+    model: "JalBox Micro",
+    capacity: "5 KLD",
+    serves: "50–100 people",
+    ideal: "Schools, hospitals, highway rest areas, railway stations",
+    enclosure: "Custom FRP/steel",
+    dimensions: "2.5m × 1.5m × 2.0m",
+    price: "₹3–5 lakh",
+    highlight: false,
+  },
+  {
     model: "JalBox 10",
     capacity: "10 KLD",
-    serves: "50–100 people",
-    ideal: "Small housing societies, schools, clinics",
+    serves: "100–200 people",
+    ideal: "Small societies, village clusters, construction sites",
+    enclosure: "10-ft container",
+    dimensions: "3.0m × 2.4m × 2.6m",
+    price: "₹5–7 lakh",
+    highlight: false,
   },
   {
     model: "JalBox 25",
     capacity: "25 KLD",
-    serves: "150–300 people",
-    ideal: "Medium societies, Gram Panchayats",
+    serves: "200–500 people",
+    ideal: "Medium societies, small towns, FSSM co-treatment nodes",
+    enclosure: "20-ft ISO container",
+    dimensions: "6.0m × 2.4m × 2.6m",
+    price: "₹8–10 lakh",
+    highlight: true,
   },
   {
     model: "JalBox 50",
     capacity: "50 KLD",
-    serves: "300–600 people",
-    ideal: "Large societies, small towns, commercial",
-  },
-  {
-    model: "JalBox Flexi",
-    capacity: "Custom",
-    serves: "Modular scale",
-    ideal: "Industrial, large municipalities",
+    serves: "500–1,000 people",
+    ideal: "Large societies, industrial reuse, HAM subcontracting",
+    enclosure: "40-ft ISO container",
+    dimensions: "12.0m × 2.4m × 2.6m",
+    price: "₹14–18 lakh",
+    highlight: false,
   },
 ] as const;
 
 export const BIONEER_COMPONENTS = [
   {
-    name: "Coconut Coir Bio-Media",
+    imported: "PE plastic MBBR media",
+    indian: "Coconut coir bio-media",
+    source: "Kerala",
+    saving: "87%",
     icon: "leaf",
-    description: "Kerala-sourced coconut coir provides ideal surface area for biofilm growth, replacing expensive imported plastic MBBR media.",
-    source: "Kerala, India",
+    description:
+      "Kerala-sourced coconut coir provides ideal surface area for biofilm growth, replacing expensive imported plastic MBBR media.",
   },
   {
-    name: "Terracotta Diffusers",
+    imported: "EPDM membrane diffusers",
+    indian: "Terracotta disc diffusers",
+    source: "Khurja, UP",
+    saving: "82%",
     icon: "wind",
-    description: "Handcrafted terracotta diffusers from Khurja replace EPDM membrane diffusers at a fraction of the cost with comparable efficiency.",
-    source: "Khurja, UP, India",
+    description:
+      "Handcrafted terracotta diffusers from Khurja replace EPDM membrane diffusers at a fraction of the cost with comparable efficiency.",
   },
   {
-    name: "Ferrocement Tanks",
-    icon: "box",
-    description: "Wire-mesh reinforced cement tanks replace expensive SS304 steel, reducing cost by 60% while lasting 25+ years.",
-    source: "Local fabrication",
-  },
-  {
-    name: "Vetiver Wetlands",
+    imported: "UV + activated carbon",
+    indian: "Vetiver constructed wetland",
+    source: "Tamil Nadu",
+    saving: "75%",
     icon: "sprout",
-    description: "Vetiver grass polishing systems replace UV+carbon filters. Zero electricity, zero consumables, plus vetiver oil as revenue.",
-    source: "Tamil Nadu, India",
+    description:
+      "Vetiver grass polishing systems replace UV+carbon filters. Zero electricity, zero consumables, plus vetiver oil as revenue.",
   },
   {
-    name: "ESP32 IoT Gateway",
+    imported: "Siemens PLC (₹70,000)",
+    indian: "ESP32 IoT gateway (₹16,000)",
+    source: "Indian PCB assembly",
+    saving: "77%",
     icon: "wifi",
-    description: "Low-cost Indian-assembled IoT gateway with solar power backup monitors all parameters in real-time via MQTT.",
-    source: "Bengaluru, India",
-  },
-  {
-    name: "Solar Power System",
-    icon: "sun",
-    description: "Indian-manufactured solar panels and lithium batteries enable fully off-grid operation for rural deployments.",
-    source: "Made in India",
+    description:
+      "Low-cost Indian-assembled IoT gateway monitors all parameters in real-time via MQTT. OTA firmware updates.",
   },
 ] as const;
 
 export const TREATMENT_STAGES = [
-  { stage: "1", name: "Bar Screen", description: "Removes large solids and debris" },
-  { stage: "2", name: "Anaerobic Baffled Reactor", description: "Primary treatment & biogas generation" },
-  { stage: "3", name: "MBBR with Coir Media", description: "Biological oxygen demand removal" },
-  { stage: "4", name: "Clarifier", description: "Settles remaining suspended solids" },
-  { stage: "5", name: "Vetiver Wetland / UV", description: "Final polishing to reuse standards" },
-  { stage: "6", name: "Treated Water Storage", description: "Ready for landscaping, flushing, irrigation" },
+  {
+    stage: "1",
+    name: "Screening & Equalization",
+    description: "Motorized bar screen removes large solids. Equalization tank buffers flow variations.",
+    bodIn: "200–300",
+    bodOut: "200–300",
+  },
+  {
+    stage: "2",
+    name: "Anaerobic Baffled Reactor",
+    description: "Primary treatment with biogas capture. Vertical baffles create multiple anaerobic zones.",
+    bodIn: "200–300",
+    bodOut: "80–120",
+  },
+  {
+    stage: "3",
+    name: "MBBR with Coconut Coir Media",
+    description: "Aerated biological treatment. Fine-bubble diffusers oxygenate water through bio-media.",
+    bodIn: "80–120",
+    bodOut: "15–25",
+  },
+  {
+    stage: "4",
+    name: "Lamella Plate Clarifier",
+    description: "Angled stainless steel plates settle remaining suspended solids efficiently.",
+    bodIn: "15–25",
+    bodOut: "8–12",
+  },
+  {
+    stage: "5",
+    name: "Vetiver Wetland / UV Polishing",
+    description: "Final polishing to CPCB 2025 reuse standards. Zero electricity for wetland option.",
+    bodIn: "8–12",
+    bodOut: "< 10",
+  },
+] as const;
+
+export const CUSTOMER_SEGMENTS = [
+  { name: "Housing Societies (RWAs)", icon: "building2" },
+  { name: "Villages & Gram Panchayats", icon: "trees" },
+  { name: "Schools & Hospitals", icon: "school" },
+  { name: "Construction Sites", icon: "hardHat" },
+  { name: "Industrial Water Reuse", icon: "factory" },
+  { name: "Government (AMRUT/JJM)", icon: "landmark" },
+  { name: "Highway & Railway Stations", icon: "trainFront" },
+  { name: "Religious & Tourist Sites", icon: "church" },
+] as const;
+
+export const WAAS_REVENUE = [
+  { source: "O&M Contract", range: "₹25–35K/month", description: "Monthly annuity for operations & maintenance" },
+  { source: "Treated Water Sales", range: "₹5–20K/month", description: "Sold for landscaping, flushing, construction" },
+  { source: "Biogas + Fertiliser", range: "₹3–8K/month", description: "Renewable energy and organic compost" },
+  { source: "Government Annuity", range: "₹25–40K/month", description: "Under HAM contracts (if applicable)" },
 ] as const;
 
 export const SDG_GOALS = [
   { number: 6, title: "Clean Water & Sanitation", relevance: "Core mission — decentralized sewage treatment" },
-  { number: 7, title: "Affordable & Clean Energy", relevance: "Solar-powered, off-grid capable STPs" },
-  { number: 8, title: "Decent Work", relevance: "Jal Mitra rural employment program" },
   { number: 9, title: "Industry & Innovation", relevance: "BioNeer™ indigenous material innovation" },
   { number: 11, title: "Sustainable Cities", relevance: "Urban and peri-urban water recycling" },
+  { number: 12, title: "Responsible Consumption", relevance: "Circular economy — waste to resource" },
   { number: 13, title: "Climate Action", relevance: "Methane capture, carbon credit generation" },
+  { number: 17, title: "Partnerships for Goals", relevance: "Government, diaspora, and NGO collaboration" },
 ] as const;
 
 export const CONTACT_CATEGORIES = [
   { value: "investment", label: "Investment Enquiry" },
   { value: "partnership", label: "Partnership / CSR" },
   { value: "customer", label: "I Need a JalBox" },
+  { value: "government", label: "Government Enquiry" },
   { value: "careers", label: "Career Opportunities" },
   { value: "media", label: "Media / Press" },
   { value: "general", label: "General Enquiry" },
+] as const;
+
+export const GOVT_SCHEMES = [
+  {
+    name: "AMRUT 2.0",
+    fullName: "Atal Mission for Rejuvenation & Urban Transformation",
+    budget: "₹2.87 Lakh Crore",
+    relevance: "Sewerage & septage management component. JalBox qualifies under decentralized STP procurement.",
+  },
+  {
+    name: "Jal Jeevan Mission",
+    fullName: "Har Ghar Jal — Rural Water Supply",
+    budget: "₹3.60 Lakh Crore",
+    relevance: "In-village greywater management mandate. JalBox ideal for Gram Panchayat deployments.",
+  },
+  {
+    name: "SBM 2.0",
+    fullName: "Swachh Bharat Mission (Urban)",
+    budget: "₹1.41 Lakh Crore",
+    relevance: "ODF+ sustainability, faecal sludge management. JalBox with FSSM port is a turnkey solution.",
+  },
+  {
+    name: "Namami Gange",
+    fullName: "National Mission for Clean Ganga",
+    budget: "₹20,000 Crore",
+    relevance: "Decentralized STPs for Ganga basin towns. JalBox ideal for smaller drains and nallahs.",
+  },
+] as const;
+
+export const CHALLENGE_TRACKS = [
+  {
+    id: "bio-treatment",
+    title: "Track 1: Bio-Treatment Design",
+    subtitle: "Design a sewage treatment process using only Indian natural materials",
+    materials: "Coconut coir, rice husk, bamboo charcoal, terracotta, vetiver, jute",
+    target: "CPCB 2025 norms, total material cost < ₹5 lakh",
+    mapsTo: "Process Engineer, Environmental Engineer",
+    prototype: false,
+  },
+  {
+    id: "iot-monitoring",
+    title: "Track 2: IoT & Monitoring",
+    subtitle: "Build a ₹15,000 smart controller for a sewage treatment plant",
+    materials: "ESP32, pH/DO/turbidity/flow/temp sensors, motor control, MQTT, WhatsApp alerts",
+    target: "Working prototype with video demo mandatory",
+    mapsTo: "IoT Engineer, Full-Stack Developer",
+    prototype: true,
+  },
+  {
+    id: "business-policy",
+    title: "Track 3: Business Model & Policy",
+    subtitle: "Deploy 100 JalBox units across UP and Bihar by 2031",
+    materials: "Revenue model, government schemes, diaspora fundraising, transparency architecture",
+    target: "20-page business plan + financial model + pitch deck",
+    mapsTo: "Operations, BD, Government Relations",
+    prototype: false,
+  },
 ] as const;

@@ -43,9 +43,12 @@ export default function ContactPage() {
                 <div className="flex items-start gap-3">
                   <MapPin className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
                   <div>
-                    <p className="font-medium text-dark">Office</p>
+                    <p className="font-medium text-dark">Current Base</p>
                     <p className="text-sm text-gray-600">
-                      New Delhi, India
+                      Geneva, Switzerland
+                    </p>
+                    <p className="text-xs text-gray-400 mt-0.5">
+                      India operations launching 2026 — Noida, UP
                     </p>
                   </div>
                 </div>
@@ -53,14 +56,17 @@ export default function ContactPage() {
                   <Mail className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
                   <div>
                     <p className="font-medium text-dark">Email</p>
-                    <p className="text-sm text-gray-600">hello@jalneeti.in</p>
+                    <p className="text-sm text-gray-600">rahul@jalneeti.in</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
                   <Phone className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
                   <div>
-                    <p className="font-medium text-dark">Phone</p>
-                    <p className="text-sm text-gray-600">+91-XXXXX-XXXXX</p>
+                    <p className="font-medium text-dark">Founder</p>
+                    <p className="text-sm text-gray-600">Rahul Jha</p>
+                    <p className="text-xs text-gray-400 mt-0.5">
+                      ITU Geneva alumnus | Bihar roots
+                    </p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">

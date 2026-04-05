@@ -4,6 +4,7 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://jalneeti.in"),
   title: {
     default: "Jal Neeti Technologies — Clean Water. Everywhere.",
     template: "%s | Jal Neeti Technologies",
@@ -26,9 +27,16 @@ export const metadata: Metadata = {
     title: "Jal Neeti Technologies — Clean Water. Everywhere.",
     description:
       "JalBox™ containerized, solar-powered, IoT-monitored sewage treatment plants built with 100% Indian materials.",
+    url: "https://jalneeti.in",
     siteName: "Jal Neeti Technologies",
     locale: "en_IN",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Jal Neeti Technologies — Clean Water. Everywhere.",
+    description:
+      "JalBox™ containerized, solar-powered, IoT-monitored sewage treatment plants built with 100% Indian materials.",
   },
 };
 
