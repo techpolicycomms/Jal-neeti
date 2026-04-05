@@ -22,6 +22,8 @@ import {
   Truck,
   Clock,
   CreditCard,
+  Shield,
+  Route,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -85,16 +87,16 @@ export default function HomePage() {
               </p>
 
               <div className="mt-10 flex flex-col sm:flex-row gap-4">
+                <Link href="/csr">
+                  <Button variant="accent" size="lg" className="w-full sm:w-auto">
+                    CSR Partnership
+                    <ArrowRight className="h-5 w-5" />
+                  </Button>
+                </Link>
                 <Link href="/product">
                   <Button size="lg" className="w-full sm:w-auto">
                     See JalBox in Action
                     <ArrowRight className="h-5 w-5" />
-                  </Button>
-                </Link>
-                <Link href="/invest">
-                  <Button variant="accent" size="lg" className="w-full sm:w-auto">
-                    Bring Clean Water to Your Village
-                    <TrendingUp className="h-5 w-5" />
                   </Button>
                 </Link>
               </div>
@@ -337,6 +339,64 @@ export default function HomePage() {
         </div>
       </Section>
 
+      {/* ── 4b. THREE LAYERS ── */}
+      <Section variant="light">
+        <SectionHeader>
+          <Badge variant="primary" className="mb-4">How We&apos;re Different</Badge>
+          <SectionTitle>Three Layers, One System</SectionTitle>
+          <SectionDescription>
+            JalBox isn&apos;t just a treatment plant. It&apos;s a platform that solves
+            three systemic problems India&apos;s water infrastructure has never addressed together.
+          </SectionDescription>
+        </SectionHeader>
+
+        <div className="grid lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          {[
+            {
+              icon: Shield,
+              title: "The Plant That Can\u2019t Fail Silently",
+              tagline: "Self-enforcing compliance through IoT",
+              description:
+                "Every JalBox auto-monitors, auto-adjusts, and auto-reports. If dissolved oxygen drops, the blower compensates. If quality dips, the outlet valve closes. Monthly CPCB compliance reports are generated and emailed to SPCB automatically.",
+              detail:
+                "No trained operator needed. No inspector visit required. No silent failures.",
+            },
+            {
+              icon: Route,
+              title: "We Go Get the Sewage",
+              tagline: "Reverse logistics for sewage collection",
+              description:
+                "60% of urban India uses septic tanks, not sewers. We don\u2019t wait for pipelines. Our GPS-tracked vacuum trucks collect septage on scheduled routes and bring it to the nearest JalBox for co-treatment.",
+              detail:
+                "Every household gets a QR code. Every pickup is logged. Every truck is tracked.",
+            },
+            {
+              icon: IndianRupee,
+              title: "Every Litre Treated Is a Litre Sold",
+              tagline: "The water circular economy platform",
+              description:
+                "Treated water from JalBox units is graded (A/B/C) and sold to construction sites, factories, farms, and municipalities. The same truck that collects septage in the morning delivers treated water in the afternoon.",
+              detail:
+                "A marketplace connecting treated water supply with industrial demand.",
+            },
+          ].map((layer) => (
+            <Card key={layer.title} className="p-8 flex flex-col">
+              <layer.icon className="h-10 w-10 text-primary mb-4" />
+              <h3 className="text-xl font-bold text-dark mb-2">{layer.title}</h3>
+              <p className="text-sm text-gray-600 mb-4 flex-1">{layer.description}</p>
+              <p className="text-sm font-medium text-dark mb-3">{layer.detail}</p>
+              <Badge variant="accent" className="self-start">
+                {layer.tagline}
+              </Badge>
+            </Card>
+          ))}
+        </div>
+
+        <p className="text-center mt-10 text-lg font-medium text-gray-500">
+          Three layers. One platform. Every component reinforces every other.
+        </p>
+      </Section>
+
       {/* ── 5. BIONEER™ INNOVATION ── */}
       <Section variant="light">
         <SectionHeader>
@@ -402,10 +462,34 @@ export default function HomePage() {
           <Badge variant="primary" className="mb-4">Who We Serve</Badge>
           <SectionTitle>Built for Every Corner of India</SectionTitle>
           <SectionDescription>
-            From housing societies to highway rest areas, JalBox serves any community
-            that generates sewage and deserves clean water.
+            From manufacturing plants to highway rest areas, JalBox serves any
+            community that generates sewage and deserves clean water.
           </SectionDescription>
         </SectionHeader>
+
+        {/* CSR/Manufacturing — primary segment highlight */}
+        <Card className="p-8 mb-8 ring-2 ring-accent shadow-lg max-w-3xl mx-auto">
+          <div className="flex items-start gap-6">
+            <Factory className="h-12 w-12 text-accent flex-shrink-0" />
+            <div>
+              <div className="flex items-center gap-2 mb-2">
+                <h3 className="text-xl font-bold text-dark">Manufacturing Plants (CSR)</h3>
+                <Badge variant="accent">Priority</Badge>
+              </div>
+              <p className="text-gray-600 mb-4">
+                Your CSR budget can fund clean water for the communities around your factory.
+                Deploy a JalBox at your facility: treat your greywater, serve your neighbouring
+                village, and earn CSR compliance under Schedule VII.
+              </p>
+              <Link href="/csr">
+                <Button variant="accent">
+                  Explore CSR Partnership
+                  <ArrowRight className="h-5 w-5" />
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </Card>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           {CUSTOMER_SEGMENTS.map((segment) => {
@@ -519,6 +603,21 @@ export default function HomePage() {
           ))}
         </div>
       </Section>
+
+      {/* ── CSR STAT BAR ── */}
+      <div className="bg-accent/10 border-y border-accent/20 py-4">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
+          <p className="text-sm md:text-base text-dark font-medium">
+            <span className="font-data font-bold text-accent">₹26,000 Cr</span>
+            {" — Annual CSR spend by Indian companies (FY24) | "}
+            <span className="font-data font-bold text-accent">Only 6%</span>
+            {" goes to water & sanitation | "}
+            <Link href="/csr" className="text-primary font-bold hover:underline">
+              We make it easy →
+            </Link>
+          </p>
+        </div>
+      </div>
 
       {/* ── 9. FINAL CTA ── */}
       <section className="relative bg-primary text-white overflow-hidden">

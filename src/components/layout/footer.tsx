@@ -3,22 +3,25 @@ import { Droplets, Mail, Phone, MapPin } from "lucide-react";
 import { BRAND } from "@/lib/constants";
 
 const footerLinks = {
+  "For CSR Teams": [
+    { label: "CSR Partnership Programme", href: "/csr" },
+    { label: "Impact Calculator", href: "/impact-calculator" },
+    { label: "Transparency Dashboard", href: "/transparency" },
+    { label: "Schedule a Call", href: "/contact?category=partnership" },
+  ],
+  "For Industry": [
+    { label: "Industrial Water Reuse", href: "/for-industry" },
+    { label: "Water Quality Data", href: "/transparency" },
+    { label: "Get a Quote", href: "/contact?category=customer" },
+  ],
   Company: [
     { label: "About Us", href: "/about" },
+    { label: "Product", href: "/product" },
+    { label: "For Government", href: "/government" },
+    { label: "Invest", href: "/invest" },
     { label: "Careers", href: "/careers" },
     { label: "Contact", href: "/contact" },
-    { label: "Transparency", href: "/transparency" },
-  ],
-  Product: [
-    { label: "JalBox™", href: "/product" },
-    { label: "BioNeer™ Innovation", href: "/product#bioneer" },
-    { label: "Sustainability", href: "/sustainability" },
-  ],
-  Stakeholders: [
-    { label: "Invest", href: "/invest" },
-    { label: "For Government", href: "/government" },
-    { label: "For Communities", href: "/contact?category=customer" },
-    { label: "For CSR Partners", href: "/contact?category=partnership" },
+    { label: "Challenge 2026", href: "/challenge" },
   ],
 };
 
@@ -51,15 +54,11 @@ export function Footer() {
             <div className="space-y-2 text-sm text-gray-400">
               <div className="flex items-center gap-2">
                 <MapPin className="h-4 w-4 text-primary-light" />
-                <span>New Delhi, India</span>
+                <span>Geneva, Switzerland | Noida, India (2026)</span>
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="h-4 w-4 text-primary-light" />
-                <span>hello@jalneeti.in</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Phone className="h-4 w-4 text-primary-light" />
-                <span>+91-XXXXX-XXXXX</span>
+                <span>rahul@jalneeti.in</span>
               </div>
             </div>
           </div>

@@ -33,8 +33,8 @@ export function Header() {
               href={link.href}
               className={cn(
                 "px-3 py-2 rounded-lg text-sm font-medium text-gray-600 transition-colors hover:text-primary hover:bg-primary/5",
-                link.label === "Invest" &&
-                  "text-accent font-bold hover:text-accent hover:bg-accent/5"
+                link.highlight &&
+                  "bg-accent text-white font-bold hover:bg-accent/90 hover:text-white"
               )}
             >
               {link.label}
@@ -62,8 +62,8 @@ export function Header() {
               onClick={() => setMobileOpen(false)}
               className={cn(
                 "block px-4 py-3 rounded-lg text-base font-medium text-gray-600 hover:text-primary hover:bg-primary/5",
-                link.label === "Invest" &&
-                  "text-accent font-bold hover:text-accent hover:bg-accent/5"
+                link.highlight &&
+                  "bg-accent text-white font-bold hover:bg-accent/90 hover:text-white"
               )}
             >
               {link.label}

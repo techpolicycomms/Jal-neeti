@@ -27,6 +27,9 @@ import {
   Cpu,
   BellRing,
   BarChart3,
+  Route,
+  IndianRupee,
+  Factory,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -43,6 +46,13 @@ import {
   BIONEER_COMPONENTS,
   TREATMENT_STAGES,
 } from "@/lib/constants";
+
+const CSR_USE_CASES: Record<string, string> = {
+  "JalBox Micro": "School/hospital adoption programmes",
+  "JalBox 10": "Village clean water projects, factory perimeter communities",
+  "JalBox 25": "Panchayat-level deployment, dual-purpose factory+community",
+  "JalBox 50": "District-level impact, industrial estate community service",
+};
 
 export const metadata: Metadata = {
   title: "JalBox™ — The Swiss Army Knife of Sewage Treatment | Jal Neeti",
@@ -218,6 +228,15 @@ export default function ProductPage() {
                     <strong>Dimensions:</strong> {model.dimensions}
                   </span>
                 </li>
+                {CSR_USE_CASES[model.model] && (
+                  <li className="flex items-start gap-2">
+                    <Factory className="h-4 w-4 text-accent mt-0.5 flex-shrink-0" />
+                    <span>
+                      <strong className="text-accent">CSR ideal for:</strong>{" "}
+                      {CSR_USE_CASES[model.model]}
+                    </span>
+                  </li>
+                )}
               </ul>
               <div className="mt-6 pt-4 border-t border-gray-100">
                 <p className="text-xs text-gray-500 uppercase tracking-wide">
@@ -316,6 +335,66 @@ export default function ProductPage() {
                 </div>
               </div>
             </div>
+          ))}
+        </div>
+      </Section>
+
+      {/* ── BUILT FOR INDIA'S REALITY ── */}
+      <Section variant="light">
+        <SectionHeader>
+          <Badge variant="accent" className="mb-4">Product Intelligence</Badge>
+          <SectionTitle>Built for India&apos;s Reality</SectionTitle>
+          <SectionDescription>
+            India&apos;s sewage infrastructure has systemic challenges. JalBox is
+            specifically designed to overcome them — not work around them.
+          </SectionDescription>
+        </SectionHeader>
+
+        <div className="space-y-8 max-w-4xl mx-auto">
+          {[
+            {
+              icon: Shield,
+              title: "Self-Enforcing Compliance",
+              problem:
+                "39% of India\u2019s STPs don\u2019t meet discharge standards (CPCB). Operators lack training. Inspectors can\u2019t visit every site.",
+              solution:
+                "Auto-adjusting treatment parameters. Auto-generated CPCB compliance reports emailed to SPCB. Public real-time dashboard. Tamper detection. No manual control panel — everything is cloud-managed.",
+            },
+            {
+              icon: Route,
+              title: "Septage Co-Treatment Port",
+              problem:
+                "60% of urban India uses septic tanks. Desludged septage is dumped illegally because there\u2019s nowhere to treat it.",
+              solution:
+                "Every unit has a dedicated septage receiving port with flow meter, truck ID logging, and controlled dosing. Vacuum trucks bring septage from across the district. One JalBox serves the entire surrounding area\u2019s septic tanks.",
+            },
+            {
+              icon: IndianRupee,
+              title: "Treated Water Marketplace",
+              problem:
+                "Only 3% of treated wastewater in India is reused. No system connects treated water supply with industrial demand.",
+              solution:
+                "Treated output is auto-graded (A/B/C) and available for sale. Metered dispenser with UPI payment. Tanker filling point for bulk buyers. Connect to our water marketplace to find buyers within 10km.",
+            },
+          ].map((feature) => (
+            <Card key={feature.title} className="p-8">
+              <div className="flex items-start gap-6">
+                <feature.icon className="h-10 w-10 text-primary flex-shrink-0" />
+                <div>
+                  <h3 className="text-xl font-bold text-dark mb-3">{feature.title}</h3>
+                  <div className="grid sm:grid-cols-2 gap-6">
+                    <div>
+                      <p className="text-xs uppercase tracking-wider font-bold text-accent mb-1">The Problem</p>
+                      <p className="text-sm text-gray-600">{feature.problem}</p>
+                    </div>
+                    <div>
+                      <p className="text-xs uppercase tracking-wider font-bold text-bio mb-1">JalBox Solution</p>
+                      <p className="text-sm text-gray-600">{feature.solution}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Card>
           ))}
         </div>
       </Section>

@@ -16,18 +16,19 @@ export const BRAND = {
   email: "rahul@jalneeti.in",
 } as const;
 
-export const NAV_LINKS = [
-  { href: "/", label: "Home" },
+export const NAV_LINKS: readonly { href: string; label: string; highlight?: boolean }[] = [
   { href: "/product", label: "Product" },
-  { href: "/sustainability", label: "Sustainability" },
-  { href: "/about", label: "About" },
-  { href: "/government", label: "Government" },
+  { href: "/for-industry", label: "For Industry" },
+  { href: "/government", label: "For Government" },
+  { href: "/csr", label: "CSR Partnership", highlight: true },
+  { href: "/impact-calculator", label: "Impact Calculator" },
   { href: "/invest", label: "Invest" },
   { href: "/transparency", label: "Transparency" },
   { href: "/challenge", label: "Challenge 2026" },
+  { href: "/about", label: "About" },
   { href: "/careers", label: "Careers" },
   { href: "/contact", label: "Contact" },
-] as const;
+];
 
 export const JALBOX_MODELS = [
   {

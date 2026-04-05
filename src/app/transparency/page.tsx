@@ -12,6 +12,9 @@ import {
   MapPin,
   BarChart3,
   Clock,
+  Building2,
+  Globe,
+  Trophy,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Section, SectionHeader, SectionTitle, SectionDescription } from "@/components/ui/section";
@@ -140,6 +143,114 @@ export default function TransparencyPage() {
             real-time as funds are deployed.
           </p>
         </div>
+      </Section>
+
+      {/* CSR Impact Tracker */}
+      <Section variant="light">
+        <SectionHeader>
+          <Badge variant="accent" className="mb-4">
+            <Building2 className="h-3 w-3 mr-1" />
+            CSR Impact Tracker
+          </Badge>
+          <SectionTitle>CSR-Funded Deployments</SectionTitle>
+          <SectionDescription>
+            Every CSR-funded JalBox deployment is tracked with real-time IoT data.
+            See exactly how corporate India&apos;s CSR budgets are creating clean water impact.
+          </SectionDescription>
+        </SectionHeader>
+
+        {/* Sample CSR deployment cards */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          {[
+            {
+              company: "Sample Corporation Ltd",
+              unit: "JalBox-CSR-001",
+              location: "Sitapur, Uttar Pradesh",
+              deployed: "Coming 2027",
+              litresDaily: "—",
+              cumulative: "—",
+              people: "~350",
+              uptime: "—",
+            },
+            {
+              company: "Sample Industries Pvt Ltd",
+              unit: "JalBox-CSR-002",
+              location: "Bhagalpur, Bihar",
+              deployed: "Coming 2027",
+              litresDaily: "—",
+              cumulative: "—",
+              people: "~500",
+              uptime: "—",
+            },
+            {
+              company: "Your Company Here",
+              unit: "JalBox-CSR-???",
+              location: "Your chosen village",
+              deployed: "Be the first",
+              litresDaily: "25,000",
+              cumulative: "9.1M/year",
+              people: "200–500",
+              uptime: "95%+ target",
+            },
+          ].map((dep) => (
+            <Card key={dep.unit} className={`p-6 ${dep.company === "Your Company Here" ? "ring-2 ring-accent" : ""}`}>
+              <div className="flex items-center gap-2 mb-3">
+                <Building2 className="h-5 w-5 text-gray-300" />
+                <span className="text-sm font-bold text-dark">{dep.company}</span>
+              </div>
+              <p className="text-xs text-gray-500 mb-4">
+                {dep.unit} &middot; {dep.location} &middot; {dep.deployed}
+              </p>
+              <div className="grid grid-cols-2 gap-3">
+                <div>
+                  <p className="font-data text-lg font-bold text-primary">{dep.litresDaily}</p>
+                  <p className="text-xs text-gray-500">Litres/day</p>
+                </div>
+                <div>
+                  <p className="font-data text-lg font-bold text-water">{dep.cumulative}</p>
+                  <p className="text-xs text-gray-500">Cumulative</p>
+                </div>
+                <div>
+                  <p className="font-data text-lg font-bold text-bio">{dep.people}</p>
+                  <p className="text-xs text-gray-500">People served</p>
+                </div>
+                <div>
+                  <p className="font-data text-lg font-bold text-accent">{dep.uptime}</p>
+                  <p className="text-xs text-gray-500">Uptime</p>
+                </div>
+              </div>
+              <div className="flex gap-1 mt-4">
+                {[6, 11, 12, 13].map((sdg) => (
+                  <Badge key={sdg} variant="success" className="text-xs">SDG {sdg}</Badge>
+                ))}
+              </div>
+            </Card>
+          ))}
+        </div>
+
+        {/* CSR Leaderboard */}
+        <Card className="max-w-2xl mx-auto mt-10 p-6">
+          <div className="flex items-center gap-2 mb-4">
+            <Trophy className="h-5 w-5 text-accent" />
+            <h3 className="font-bold text-dark">CSR Impact Leaderboard</h3>
+          </div>
+          <div className="text-center py-8 text-gray-400">
+            <Globe className="h-10 w-10 mx-auto mb-3 text-gray-200" />
+            <p className="text-sm">
+              Be the first company on the leaderboard.
+              <br />
+              CSR deployments launching 2027.
+            </p>
+          </div>
+          <div className="text-center mt-4">
+            <Link href="/csr">
+              <Button variant="accent">
+                Join the Leaderboard
+                <ArrowRight className="h-5 w-5" />
+              </Button>
+            </Link>
+          </div>
+        </Card>
       </Section>
 
       {/* Commitments */}
