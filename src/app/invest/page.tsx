@@ -152,7 +152,7 @@ export default function InvestPage() {
               <TrendingUp className="h-3 w-3 mr-1" />
               Diaspora Investment
             </Badge>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-light tracking-[-0.028em] leading-[1.03]">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
               {BRAND.diasporaCta}
             </h1>
             <p className="mt-6 text-xl md:text-2xl text-gray-300 leading-relaxed">
@@ -520,7 +520,7 @@ export default function InvestPage() {
       <Section variant="light">
         <div className="max-w-3xl mx-auto text-center">
           <Globe className="h-12 w-12 text-primary mx-auto mb-4" />
-          <h2 className="text-3xl md:text-4xl font-light tracking-tight text-dark mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-dark mb-4">
             Living Abroad but Heart in India?
           </h2>
           <p className="text-lg text-gray-600 mb-4">
@@ -565,7 +565,7 @@ export default function InvestPage() {
       <section className="bg-accent text-white py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
           <Heart className="h-10 w-10 mx-auto mb-4 opacity-80" />
-          <h2 className="text-3xl md:text-4xl font-light tracking-tight">
+          <h2 className="text-3xl md:text-4xl font-bold">
             Your Village Is Waiting
           </h2>
           <p className="mt-4 text-lg text-white/80 max-w-xl mx-auto">

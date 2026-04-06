@@ -71,7 +71,7 @@ export default function HomePage() {
                 72% of India&apos;s sewage flows untreated into rivers
               </Badge>
 
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-light tracking-[-0.028em] leading-[1.03]">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1]">
                 <span className="text-white">
                   We fix that.
                 </span>
@@ -81,7 +81,7 @@ export default function HomePage() {
                 </span>
               </h1>
 
-              <p className="mt-6 text-lg md:text-xl font-light text-gray-300 max-w-2xl leading-relaxed">
+              <p className="mt-6 text-lg md:text-xl text-gray-300 max-w-2xl leading-relaxed">
                 JalBox™ — containerised sewage treatment plants. Solar-powered.
                 IoT-monitored. 100% Indian materials. Deployed in 48 hours.
               </p>
@@ -626,10 +626,10 @@ export default function HomePage() {
           <div className="absolute bottom-10 left-10 w-48 h-48 bg-water rounded-full blur-[80px]" />
         </div>
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 md:py-28 text-center">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-tight">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight">
             Join the Clean Water Revolution
           </h2>
-          <p className="mt-4 text-lg md:text-xl font-light text-white/80 max-w-2xl mx-auto">
+          <p className="mt-4 text-lg md:text-xl text-white/80 max-w-2xl mx-auto">
             72% of India&apos;s sewage is untreated. One JalBox at a time, we change that.
             Whether you&apos;re an RWA, an NRI, a Gram Panchayat, or a government body —
             there&apos;s a way to work with Jal Neeti.

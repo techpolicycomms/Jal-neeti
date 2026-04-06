@@ -59,7 +59,7 @@ export default function AboutPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <Badge variant="primary" className="mb-4">About Us</Badge>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-light tracking-[-0.028em] leading-[1.03]">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
               Water Policy{" "}
               <span className="text-primary-light">in Action</span>
             </h1>

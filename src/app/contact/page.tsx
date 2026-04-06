@@ -19,7 +19,7 @@ export default function ContactPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <Badge variant="primary" className="mb-4">Contact</Badge>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-light tracking-[-0.028em] leading-[1.03]">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
               Let&apos;s Talk <span className="text-primary-light">Water</span>
             </h1>
             <p className="mt-4 text-xl text-gray-300">

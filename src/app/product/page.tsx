@@ -140,10 +140,10 @@ export default function ProductPage() {
               <Badge variant="primary" className="mb-4">
                 Water-as-a-Service
               </Badge>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-light tracking-[-0.028em] leading-[1.03]">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
                 {BRAND.product} — The Swiss Army Knife of Sewage Treatment
               </h1>
-              <p className="mt-4 text-xl font-light text-gray-300">
+              <p className="mt-4 text-xl text-gray-300">
                 A complete, self-contained treatment plant in a shipping
                 container.
               </p>

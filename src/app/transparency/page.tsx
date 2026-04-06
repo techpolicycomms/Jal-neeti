@@ -49,7 +49,7 @@ export default function TransparencyPage() {
               <Eye className="h-3 w-3 mr-1" />
               Transparency
             </Badge>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-light tracking-[-0.028em] leading-[1.03]">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
               Every Rupee Tracked.{" "}
               <span className="text-primary-light">Every Litre Counted.</span>
             </h1>
@@ -82,7 +82,7 @@ export default function TransparencyPage() {
               <metric.icon
                 className={`h-8 w-8 ${metric.color} mx-auto mb-3`}
               />
-              <div className="font-data text-3xl md:text-4xl font-light tracking-tight text-dark">
+              <div className="font-data text-3xl md:text-4xl font-bold text-dark">
                 {metric.value}
               </div>
               <p className="text-sm text-gray-500 mt-1">{metric.label}</p>
@@ -311,7 +311,7 @@ export default function TransparencyPage() {
       {/* CTA */}
       <section className="bg-primary text-white py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-light tracking-tight">
+          <h2 className="text-3xl md:text-4xl font-bold">
             Invest with Confidence
           </h2>
           <p className="mt-4 text-lg text-white/80 max-w-xl mx-auto">

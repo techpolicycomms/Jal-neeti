@@ -143,7 +143,7 @@ export default function CareersPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <Badge variant="primary" className="mb-4">Careers</Badge>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-light tracking-[-0.028em] leading-[1.03]">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
               Build India&apos;s{" "}
               <span className="text-primary-light">Water Future</span>
             </h1>
@@ -245,7 +245,7 @@ export default function CareersPage() {
       <Section variant="dark">
         <div className="max-w-3xl mx-auto text-center">
           <Users className="h-12 w-12 text-primary-light mx-auto mb-4" />
-          <h2 className="text-3xl md:text-4xl font-light tracking-tight text-white mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Jal Mitra Program
           </h2>
           <p className="text-lg text-gray-300 mb-8">

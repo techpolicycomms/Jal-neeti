@@ -1,100 +1,36 @@
 @import "tailwindcss";
 
 @theme inline {
-  /* Brand palette (unchanged — water/teal identity) */
   --color-primary: #0E7C7B;
   --color-primary-light: #14B8A6;
   --color-accent: #D97706;
   --color-accent-light: #FBBF24;
   --color-water: #38BDF8;
   --color-bio: #22C55E;
-
-  /* Refined neutrals (Stripe-inspired) */
-  --color-dark: #061B31;        /* deep navy — headings, never pure black */
-  --color-card: #0D253D;        /* dark section card */
-  --color-label: #273951;       /* secondary headings, form labels */
-  --color-body: #64748D;        /* secondary text, descriptions */
-  --color-border: #E5EDF5;      /* standard divider border */
-  --color-border-soft: #EEF2F7; /* subtle background border */
-
+  --color-dark: #0B1120;
+  --color-card: #111C30;
   --color-background: #ffffff;
-  --color-foreground: #061B31;
-
-  --font-heading: "DM Sans", system-ui, sans-serif;
+  --color-foreground: #0B1120;
+  --font-heading: "Playfair Display", Georgia, serif;
   --font-body: "DM Sans", system-ui, sans-serif;
   --font-data: "JetBrains Mono", ui-monospace, monospace;
-
-  /* Conservative radius scale */
-  --radius-xs: 4px;
-  --radius-sm: 5px;
-  --radius-md: 6px;
-  --radius-lg: 8px;
 }
 
 html {
   scroll-behavior: smooth;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
   background: var(--color-background);
   color: var(--color-foreground);
   font-family: var(--font-body);
-  font-weight: 400;
-  font-feature-settings: "ss01", "cv11";
-  letter-spacing: -0.003em;
 }
 
-/* Refined display typography — "lightness as luxury" */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
-  color: var(--color-dark);
-  font-weight: 300;
-  letter-spacing: -0.022em;
-  line-height: 1.1;
 }
 
-h1 { letter-spacing: -0.028em; line-height: 1.03; }
-h2 { letter-spacing: -0.022em; line-height: 1.1; }
-h3 { letter-spacing: -0.018em; line-height: 1.15; }
-
-/* Data / KPI displays */
+/* Utility for data/KPI displays */
 .font-data {
   font-family: var(--font-data);
-  font-feature-settings: "tnum", "ss01";
-}
-
-/* Stripe-inspired elevation — blue-tinted shadows */
-.shadow-elevated {
-  box-shadow:
-    rgba(50, 50, 93, 0.15) 0px 30px 45px -30px,
-    rgba(0, 0, 0, 0.08) 0px 18px 36px -18px;
-}
-
-.shadow-standard {
-  box-shadow:
-    rgba(23, 23, 23, 0.08) 0px 15px 35px,
-    rgba(23, 23, 23, 0.06) 0px 3px 6px;
-}
-
-.shadow-ambient {
-  box-shadow: rgba(23, 23, 23, 0.06) 0px 3px 6px;
-}
-
-.shadow-deep {
-  box-shadow:
-    rgba(3, 3, 39, 0.25) 0px 14px 21px -14px,
-    rgba(0, 0, 0, 0.1) 0px 8px 17px -8px;
-}
-
-/* Section rhythm */
-.section-rhythm > * + * {
-  border-top: 1px solid var(--color-border);
-}
-
-/* Print-friendly impact calculator */
-@media print {
-  nav, footer, button { display: none !important; }
-  body { background: white; }
 }
