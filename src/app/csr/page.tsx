@@ -215,7 +215,7 @@ export default function CSRPage() {
               <Handshake className="h-3 w-3 mr-1" />
               CSR Partnership Programme
             </Badge>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-light tracking-[-0.028em] leading-[1.03] leading-tight">
               Your CSR Budget Can Give an Entire Village Clean Water.{" "}
               <span className="text-accent">Permanently.</span>
             </h1>

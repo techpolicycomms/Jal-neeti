@@ -139,7 +139,7 @@ export default function ForIndustryPage() {
               <Factory className="h-3 w-3 mr-1" />
               For Industry
             </Badge>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-light tracking-[-0.028em] leading-[1.03]">
               Your Factory Needs Water.{" "}
               <span className="text-primary-light">
                 The Sewage Next Door Has It.
@@ -344,7 +344,7 @@ export default function ForIndustryPage() {
       {/* 6. ENQUIRY CTA */}
       <section className="bg-primary text-white py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold">
+          <h2 className="text-3xl md:text-4xl font-light tracking-tight">
             Get a Custom Quote for Your Plant
           </h2>
           <p className="mt-4 text-lg text-white/80 max-w-xl mx-auto">

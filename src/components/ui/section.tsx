@@ -14,18 +14,18 @@ export function Section({
   return (
     <section
       className={cn(
-        "py-16 px-4 sm:px-6 lg:px-8 md:py-24",
+        "py-20 px-4 sm:px-6 lg:px-8 md:py-28",
         {
           "bg-white": variant === "default",
           "bg-dark text-white": variant === "dark",
           "bg-primary text-white": variant === "teal",
-          "bg-gray-50": variant === "light",
+          "bg-[#FAFBFC]": variant === "light",
         },
         className
       )}
       {...props}
     >
-      <div className="mx-auto max-w-7xl">{children}</div>
+      <div className="mx-auto max-w-6xl">{children}</div>
     </section>
   );
 }
@@ -37,7 +37,7 @@ export function SectionHeader({
 }: HTMLAttributes<HTMLDivElement>) {
   return (
     <div
-      className={cn("text-center max-w-3xl mx-auto mb-12 md:mb-16", className)}
+      className={cn("text-center max-w-3xl mx-auto mb-16 md:mb-20", className)}
       {...props}
     >
       {children}
@@ -53,7 +53,7 @@ export function SectionTitle({
   return (
     <h2
       className={cn(
-        "text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight",
+        "text-3xl md:text-4xl lg:text-5xl font-light tracking-tight",
         className
       )}
       {...props}
@@ -71,7 +71,7 @@ export function SectionDescription({
   return (
     <p
       className={cn(
-        "mt-4 text-lg md:text-xl opacity-80 leading-relaxed",
+        "mt-5 text-lg md:text-xl font-light text-[color:var(--color-body)] leading-relaxed",
         className
       )}
       {...props}

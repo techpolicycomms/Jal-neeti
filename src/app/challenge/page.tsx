@@ -123,7 +123,7 @@ export default function ChallengePage() {
             <p className="text-lg text-accent-light font-data font-bold mb-4">
               72,000 MLD of sewage. 28% treated. You design the fix.
             </p>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-light tracking-[-0.028em] leading-[1.03]">
               Jal Neeti Challenge{" "}
               <span className="text-accent-light">2026</span>
             </h1>
@@ -415,7 +415,7 @@ export default function ChallengePage() {
       {/* CTA */}
       <section className="bg-accent text-white py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold">
+          <h2 className="text-3xl md:text-4xl font-light tracking-tight">
             Ready to Build India&apos;s Water Future?
           </h2>
           <p className="mt-4 text-lg text-white/80 max-w-xl mx-auto">

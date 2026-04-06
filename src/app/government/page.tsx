@@ -97,7 +97,7 @@ export default function GovernmentPage() {
               <Building2 className="h-3 w-3 mr-1" />
               Government Partners
             </Badge>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-light tracking-[-0.028em] leading-[1.03]">
               Built for Government Schemes.{" "}
               <span className="text-primary-light">
                 Designed for Indian Conditions.
@@ -289,7 +289,7 @@ export default function GovernmentPage() {
       {/* CTA */}
       <section className="bg-primary text-white py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold">
+          <h2 className="text-3xl md:text-4xl font-light tracking-tight">
             Explore a Partnership
           </h2>
           <p className="mt-4 text-lg text-white/80 max-w-xl mx-auto">
