@@ -355,11 +355,11 @@ export default function HomePage() {
             {
               icon: Shield,
               title: "The Plant That Can\u2019t Fail Silently",
-              tagline: "Self-enforcing compliance through IoT",
+              tagline: "Edge AI + self-enforcing compliance",
               description:
-                "Every JalBox auto-monitors, auto-adjusts, and auto-reports. If dissolved oxygen drops, the blower compensates. If quality dips, the outlet valve closes. Monthly CPCB compliance reports are generated and emailed to SPCB automatically.",
+                "Our ESP32 controller doesn\u2019t just monitor \u2014 it thinks. Edge ML runs adaptive DO control, anomaly detection, and predictive maintenance on-device, even offline. If quality dips, the outlet valve closes automatically. Monthly CPCB reports are generated and emailed to SPCB.",
               detail:
-                "No trained operator needed. No inspector visit required. No silent failures.",
+                "15\u201325% energy savings through AI. No trained operator needed. No silent failures.",
             },
             {
               icon: Route,
@@ -394,6 +394,7 @@ export default function HomePage() {
 
         <p className="text-center mt-10 text-lg font-medium text-gray-500">
           Three layers. One platform. Every component reinforces every other.
+          Every BioNeer material validated by published peer-reviewed research.
         </p>
       </Section>
 
@@ -401,7 +402,7 @@ export default function HomePage() {
       <Section variant="light">
         <SectionHeader>
           <Badge variant="success" className="mb-4">BioNeer™ Innovation</Badge>
-          <SectionTitle>100% Indian Materials. 50% Lower Cost.</SectionTitle>
+          <SectionTitle>100% Indian Materials. 6 Replacements. 50% Lower Cost.</SectionTitle>
           <SectionDescription>
             Every component in a JalBox can be traced to an Indian state. We replaced
             expensive imports with indigenous materials — slashing costs while boosting
@@ -518,17 +519,17 @@ export default function HomePage() {
         <div className="mb-12 rounded-2xl overflow-hidden border border-gray-200 bg-white shadow-sm">
           <Image
             src="/images/jalbox-schematic.jpg"
-            alt="JalBox cutaway schematic showing screening chamber, anaerobic baffled reactor, MBBR with coconut coir bio-media, lamella plate clarifier, and UV/vetiver polishing"
+            alt="JalBox cutaway schematic showing 6-stage treatment: screening, ABR, MBBR, clarifier, biochar adsorption, and vetiver/UV polishing"
             width={1400}
             height={700}
             className="w-full h-auto"
           />
           <div className="p-4 md:p-6 bg-gray-50 border-t border-gray-100">
             <p className="text-sm text-gray-600 text-center">
-              <strong>JalBox™ Cross-Section:</strong> Screening &amp; Equalization →
+              <strong>JalBox™ 6-Stage Cross-Section:</strong> Screening &amp; Equalization →
               Anaerobic Baffled Reactor → MBBR (Coconut Coir Media) → Lamella Plate
-              Clarifier → Vetiver Wetland / UV Polishing. Solar panels on top, biogas
-              collection dome, IoT gateway, and insulated container walls.
+              Clarifier → Coconut Shell Biochar Adsorption → Vetiver Wetland / UV Polishing.
+              Solar panels on top, biogas collection, ESP32 IoT with edge ML, and insulated container walls.
             </p>
           </div>
         </div>

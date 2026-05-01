@@ -15,6 +15,9 @@ import {
   Building2,
   Globe,
   Trophy,
+  FlaskConical,
+  CheckCircle,
+  BookOpen,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Section, SectionHeader, SectionTitle, SectionDescription } from "@/components/ui/section";
@@ -251,6 +254,89 @@ export default function TransparencyPage() {
             </Link>
           </div>
         </Card>
+      </Section>
+
+      {/* Technology Validation */}
+      <Section>
+        <SectionHeader>
+          <Badge variant="primary" className="mb-4">
+            <FlaskConical className="h-3 w-3 mr-1" />
+            Technology Validation
+          </Badge>
+          <SectionTitle>Peer-Reviewed Science Behind Every Stage</SectionTitle>
+          <SectionDescription>
+            Every BioNeer material and innovation in JalBox is supported by
+            published peer-reviewed research. This gives CSR heads and government
+            officials the scientific confidence to approve deployments.
+          </SectionDescription>
+        </SectionHeader>
+
+        <div className="max-w-4xl mx-auto space-y-4">
+          {[
+            {
+              material: "Coconut Coir MBBR Media",
+              validation:
+                "Equivalent biofilm growth and BOD removal to imported PE media across multiple published studies. 87% cost reduction with comparable treatment efficiency.",
+              stat: "87% cost saving",
+            },
+            {
+              material: "Coconut Shell Biochar Adsorption",
+              validation:
+                "84–93% organic removal, 89% nitrate removal validated in peer-reviewed energy and environmental journals (2024–2025). Effective against pharmaceuticals, heavy metals, and emerging contaminants.",
+              stat: "84–93% organic removal",
+            },
+            {
+              material: "Solar TiO₂ Photocatalysis",
+              validation:
+                "93–100% pathogen and metal removal through solar-activated hydroxyl radicals. Zero electricity, zero consumables. Published in advanced oxidation process research.",
+              stat: "93–100% pathogen removal",
+            },
+            {
+              material: "AI/ML Edge Process Control",
+              validation:
+                "15–25% energy reduction through adaptive dissolved oxygen optimisation. Anomaly detection and predictive maintenance validated across 5 peer-reviewed AI applications in wastewater.",
+              stat: "15–25% energy reduction",
+            },
+            {
+              material: "Chitosan Biosorbent",
+              validation:
+                "Heavy metal capture via ion exchange and chelation from seafood waste. Peer-reviewed validation for electroplating, textile, and food processing effluent treatment.",
+              stat: "95%+ heavy metal capture",
+            },
+            {
+              material: "Electrocoagulation Pre-Treatment",
+              validation:
+                "97%+ turbidity and petroleum hydrocarbon removal using aluminium electrodes. Validated for industrial co-treatment applications in hybrid system research.",
+              stat: "97%+ turbidity removal",
+            },
+          ].map((item) => (
+            <Card key={item.material} className="p-6">
+              <div className="flex items-start gap-4">
+                <CheckCircle className="h-6 w-6 text-bio flex-shrink-0 mt-0.5" />
+                <div className="flex-1">
+                  <div className="flex items-center justify-between mb-2">
+                    <h3 className="font-bold text-dark">{item.material}</h3>
+                    <Badge variant="primary" className="font-data text-xs">
+                      {item.stat}
+                    </Badge>
+                  </div>
+                  <p className="text-sm text-gray-600 leading-relaxed">
+                    {item.validation}
+                  </p>
+                </div>
+              </div>
+            </Card>
+          ))}
+        </div>
+
+        <div className="mt-8 max-w-2xl mx-auto p-4 rounded-xl bg-primary/5 border border-primary/10 text-center">
+          <div className="flex items-center justify-center gap-2 text-sm text-gray-700">
+            <BookOpen className="h-4 w-4 text-primary" />
+            All validation data sourced from peer-reviewed publications in
+            leading energy, environmental engineering, and water research
+            journals.
+          </div>
+        </div>
       </Section>
 
       {/* Commitments */}

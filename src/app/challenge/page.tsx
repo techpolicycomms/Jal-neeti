@@ -15,6 +15,8 @@ import {
   Leaf,
   Wifi,
   Briefcase,
+  FlaskConical,
+  SunMedium,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -209,6 +211,48 @@ export default function ChallengePage() {
               </Card>
             );
           })}
+        </div>
+        {/* NEW: Track 1 Sub-Tracks */}
+        <div className="mt-12 max-w-4xl mx-auto">
+          <h3 className="text-lg font-bold text-dark text-center mb-6">
+            New in 2026: Track 1 Sub-Tracks
+          </h3>
+          <p className="text-sm text-gray-600 text-center mb-8 max-w-2xl mx-auto">
+            These sub-tracks align directly with JalBox&apos;s new treatment
+            stages — winning solutions get integrated into production units.
+          </p>
+          <div className="grid sm:grid-cols-2 gap-6">
+            <Card className="p-6 ring-2 ring-accent/30">
+              <FlaskConical className="h-8 w-8 text-accent mb-3" />
+              <h4 className="font-bold text-dark mb-2">
+                Sub-Track 1A: Biochar Adsorption Stage
+              </h4>
+              <p className="text-sm text-gray-600 leading-relaxed">
+                Design a biochar adsorption stage using any Indian agricultural
+                waste: coconut shell, rice husk, sugarcane bagasse, or bamboo
+                charcoal. Optimise for pharmaceutical and heavy metal removal.
+                Include regeneration strategy using biogas.
+              </p>
+              <Badge variant="accent" className="mt-3">
+                Winning design integrated into JalBox production
+              </Badge>
+            </Card>
+            <Card className="p-6 ring-2 ring-accent/30">
+              <SunMedium className="h-8 w-8 text-accent mb-3" />
+              <h4 className="font-bold text-dark mb-2">
+                Sub-Track 1B: Solar Photocatalytic Disinfection
+              </h4>
+              <p className="text-sm text-gray-600 leading-relaxed">
+                Design a solar photocatalytic disinfection system using locally
+                available TiO₂ sources. Must achieve 93%+ pathogen removal with
+                zero electricity and zero consumables. Fit within JalBox Micro
+                footprint.
+              </p>
+              <Badge variant="accent" className="mt-3">
+                Winning design integrated into JalBox Micro
+              </Badge>
+            </Card>
+          </div>
         </div>
       </Section>
 

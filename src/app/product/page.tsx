@@ -30,6 +30,13 @@ import {
   Route,
   IndianRupee,
   Factory,
+  FlaskConical,
+  Brain,
+  SunMedium,
+  Beaker,
+  Wrench,
+  Settings,
+  BookOpen,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -55,9 +62,9 @@ const CSR_USE_CASES: Record<string, string> = {
 };
 
 export const metadata: Metadata = {
-  title: "JalBox™ — The Swiss Army Knife of Sewage Treatment | Jal Neeti",
+  title: "JalBox™ — 6-Stage Containerised Sewage Treatment | Jal Neeti",
   description:
-    "JalBox™ containerized sewage treatment plants. You subscribe to clean water, not buy equipment. Solar-powered, IoT-monitored, CPCB 2025 compliant. 5 KLD to 50 KLD models available.",
+    "JalBox™ 6-stage containerized sewage treatment plants with biochar adsorption, AI/ML edge intelligence, and solar photocatalytic disinfection. Solar-powered, IoT-monitored, CPCB 2025 compliant. 5 KLD to 50 KLD.",
 };
 
 const DEPLOYMENT_SCENARIOS = [
@@ -259,13 +266,13 @@ export default function ProductPage() {
         </div>
       </Section>
 
-      {/* ── 5-STAGE TREATMENT PROCESS ── */}
+      {/* ── 6-STAGE TREATMENT PROCESS ── */}
       <Section variant="dark">
         <SectionHeader>
-          <SectionTitle>5-Stage Treatment Process</SectionTitle>
+          <SectionTitle>6-Stage Treatment Process</SectionTitle>
           <SectionDescription>
-            Raw sewage in, reusable water out. Every stage is biological — no
-            harsh chemicals, no expensive membranes.
+            Raw sewage in, reusable water out. Six stages — biological treatment,
+            biochar adsorption, and natural polishing. No harsh chemicals, no expensive membranes.
           </SectionDescription>
         </SectionHeader>
 
@@ -274,7 +281,7 @@ export default function ProductPage() {
           <div className="bg-white p-2">
             <Image
               src="/images/jalbox-schematic.jpg"
-              alt="JalBox cutaway schematic showing 5-stage treatment: Screening, ABR, MBBR, Clarifier, and Wetland/UV polishing — with solar panels on top and biogas collection"
+              alt="JalBox cutaway schematic showing 6-stage treatment: Screening, ABR, MBBR, Clarifier, Biochar Adsorption, and Wetland/UV polishing — with solar panels on top and biogas collection"
               width={1400}
               height={700}
               className="w-full h-auto"
@@ -399,8 +406,198 @@ export default function ProductPage() {
         </div>
       </Section>
 
-      {/* ── NEW FEATURES ── */}
+      {/* ── RESEARCH-BACKED INNOVATION ── */}
+      <Section variant="dark">
+        <SectionHeader>
+          <Badge variant="water" className="mb-4">
+            <FlaskConical className="h-3 w-3 mr-1" />
+            Peer-Reviewed Science
+          </Badge>
+          <SectionTitle>Research-Backed Innovation</SectionTitle>
+          <SectionDescription>
+            Every stage in JalBox is validated by peer-reviewed research published
+            in top environmental engineering journals. JalBox isn&apos;t just
+            engineering — it&apos;s applied science.
+          </SectionDescription>
+        </SectionHeader>
+
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          {[
+            {
+              icon: Leaf,
+              title: "Biochar Adsorption",
+              stat: "84–93%",
+              statLabel: "organic removal",
+              description:
+                "Coconut shell biochar removes pharmaceuticals, heavy metals, and emerging contaminants. 89% nitrate removal validated in published studies.",
+            },
+            {
+              icon: Brain,
+              title: "AI/ML Process Control",
+              stat: "15–25%",
+              statLabel: "energy reduction",
+              description:
+                "Edge ML on ESP32 enables adaptive dissolved oxygen control, anomaly detection, and predictive maintenance — validated by peer-reviewed AI applications in wastewater.",
+            },
+            {
+              icon: SunMedium,
+              title: "Solar TiO₂ Photocatalysis",
+              stat: "93–100%",
+              statLabel: "pathogen removal",
+              description:
+                "TiO₂-coated plates generate hydroxyl radicals under solar UV. Zero electricity. Zero consumables. Zero chemical addition.",
+            },
+            {
+              icon: Beaker,
+              title: "Chitosan Biosorbent",
+              stat: "95%+",
+              statLabel: "heavy metal capture",
+              description:
+                "Chitosan from Indian coastal seafood waste captures heavy metals via ion exchange and chelation. Modular insert for industrial models.",
+            },
+            {
+              icon: Zap,
+              title: "Electrocoagulation",
+              stat: "97%+",
+              statLabel: "turbidity removal",
+              description:
+                "Aluminium electrode pre-treatment removes oil, grease, and petroleum traces. Optional add-on for industrial co-treatment deployments.",
+            },
+            {
+              icon: Sprout,
+              title: "Hybrid Biological-Natural",
+              stat: "6 stages",
+              statLabel: "integrated treatment",
+              description:
+                "The combination of biological (ABR, MBBR), adsorptive (biochar), and natural (vetiver wetland) treatment is validated as superior to any single approach.",
+            },
+          ].map((innovation) => (
+            <div
+              key={innovation.title}
+              className="rounded-2xl bg-card border border-white/10 p-6 hover:border-primary-light/30 transition-all"
+            >
+              <innovation.icon className="h-8 w-8 text-primary-light mb-3" />
+              <h3 className="text-lg font-bold text-white mb-1">
+                {innovation.title}
+              </h3>
+              <div className="flex items-baseline gap-2 mb-3">
+                <span className="font-data text-2xl font-bold text-accent-light">
+                  {innovation.stat}
+                </span>
+                <span className="text-xs text-gray-400">
+                  {innovation.statLabel}
+                </span>
+              </div>
+              <p className="text-sm text-gray-400 leading-relaxed">
+                {innovation.description}
+              </p>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-10 max-w-2xl mx-auto p-4 rounded-xl bg-white/5 border border-white/10 text-center">
+          <p className="text-sm text-gray-300">
+            <BookOpen className="h-4 w-4 inline mr-1 text-primary-light" />
+            All innovations validated by published peer-reviewed studies in
+            leading environmental engineering and energy journals.
+          </p>
+        </div>
+      </Section>
+
+      {/* ── CONFIGURABLE FOR YOUR NEEDS ── */}
       <Section>
+        <SectionHeader>
+          <Badge variant="accent" className="mb-4">
+            <Settings className="h-3 w-3 mr-1" />
+            Modular Design
+          </Badge>
+          <SectionTitle>Configurable for Your Needs</SectionTitle>
+          <SectionDescription>
+            Every JalBox starts with the same 6-stage core. Add modules based on
+            your deployment context — from compact rural units to heavy industrial
+            co-treatment.
+          </SectionDescription>
+        </SectionHeader>
+
+        <div className="grid lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          {[
+            {
+              title: "Standard JalBox",
+              subtitle: "Community & residential",
+              color: "ring-primary",
+              badgeVariant: "primary" as const,
+              stages: [
+                "6-stage treatment train",
+                "Vetiver constructed wetland polishing",
+                "Coconut shell biochar column",
+                "ESP32 IoT with edge ML",
+                "Solar + battery power system",
+                "FSSM co-treatment port",
+              ],
+              ideal: "Housing societies, villages, schools, hospitals",
+            },
+            {
+              title: "Industrial JalBox",
+              subtitle: "Factory & CSR dual-purpose",
+              color: "ring-accent",
+              badgeVariant: "accent" as const,
+              stages: [
+                "Everything in Standard, plus:",
+                "Electrocoagulation pre-treatment",
+                "Chitosan biosorbent cartridge",
+                "Enhanced biochar for heavy metals",
+                "Industrial-grade flow metering",
+                "Dual inlet (factory + community)",
+              ],
+              ideal: "Manufacturing plants, textile units, food processing, CSR deployments",
+            },
+            {
+              title: "Compact JalBox",
+              subtitle: "Space-constrained sites",
+              color: "ring-water",
+              badgeVariant: "water" as const,
+              stages: [
+                "6-stage core in smaller footprint",
+                "TiO₂ solar photocatalytic disinfection",
+                "No wetland required",
+                "Zero-electricity pathogen kill",
+                "Ideal for JalBox Micro (5 KLD)",
+                "Highway rest areas, railway stations",
+              ],
+              ideal: "Schools, rest areas, construction sites, railway stations",
+            },
+          ].map((config) => (
+            <Card
+              key={config.title}
+              className={`p-8 flex flex-col ring-2 ${config.color}`}
+            >
+              <Badge variant={config.badgeVariant} className="self-start mb-4">
+                {config.subtitle}
+              </Badge>
+              <h3 className="text-xl font-bold text-dark mb-4">
+                {config.title}
+              </h3>
+              <ul className="space-y-2 text-sm text-gray-600 flex-1">
+                {config.stages.map((stage) => (
+                  <li key={stage} className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-bio mt-0.5 flex-shrink-0" />
+                    <span>{stage}</span>
+                  </li>
+                ))}
+              </ul>
+              <div className="mt-6 pt-4 border-t border-gray-100">
+                <p className="text-xs text-gray-500 uppercase tracking-wide mb-1">
+                  Ideal for
+                </p>
+                <p className="text-sm text-dark font-medium">{config.ideal}</p>
+              </div>
+            </Card>
+          ))}
+        </div>
+      </Section>
+
+      {/* ── NEW FEATURES ── */}
+      <Section variant="light">
         <SectionHeader>
           <Badge variant="accent" className="mb-4">
             New in 2026
@@ -483,21 +680,22 @@ export default function ProductPage() {
         </div>
       </Section>
 
-      {/* ── IoT MONITORING ── */}
+      {/* ── IoT + EDGE AI ── */}
       <Section>
         <SectionHeader>
           <Badge variant="water" className="mb-4">
             <Wifi className="h-3 w-3 mr-1" />
-            ESP32-Based IoT
+            ESP32 IoT + Edge AI
           </Badge>
-          <SectionTitle>Every Drop, Tracked</SectionTitle>
+          <SectionTitle>Every Drop, Tracked. Every Decision, Intelligent.</SectionTitle>
           <SectionDescription>
-            Our custom IoT gateway monitors 10 parameters in real-time via MQTT
-            telemetry. WhatsApp alerts for anomalies. OTA firmware updates.
+            Our ESP32 gateway doesn&apos;t just monitor — it thinks. Edge ML
+            inference runs on-device for adaptive control, anomaly detection, and
+            predictive maintenance. Works even offline.
           </SectionDescription>
         </SectionHeader>
 
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-4xl mx-auto">
           <div className="grid sm:grid-cols-3 gap-6 mb-10">
             <div className="flex items-center gap-3 p-4 rounded-xl bg-gray-50 border border-gray-100">
               <Cpu className="h-8 w-8 text-primary flex-shrink-0" />
@@ -529,6 +727,49 @@ export default function ProductPage() {
             </div>
           </div>
 
+          {/* Edge AI capabilities */}
+          <div className="grid sm:grid-cols-2 gap-4 mb-10">
+            {[
+              {
+                icon: Brain,
+                title: "Adaptive DO Control",
+                description:
+                  "ML model adjusts blower speed based on inlet load prediction — time-of-day patterns, flow rate trends. 15–25% energy savings.",
+              },
+              {
+                icon: Shield,
+                title: "Anomaly Detection",
+                description:
+                  "TinyML detects membrane fouling, biofilm washout, and pump cavitation signatures. Predictive maintenance alerts before failure.",
+              },
+              {
+                icon: Droplets,
+                title: "Water Quality Prediction",
+                description:
+                  "Predicts outlet BOD/COD 2–4 hours ahead based on inlet conditions, allowing preemptive process adjustments.",
+              },
+              {
+                icon: Fuel,
+                title: "Biogas Yield Optimisation",
+                description:
+                  "Correlates ABR temperature, pH, and sludge age with biogas production to maximise energy recovery.",
+              },
+            ].map((ai) => (
+              <div
+                key={ai.title}
+                className="flex items-start gap-4 p-4 rounded-xl bg-gray-50 border border-gray-100"
+              >
+                <ai.icon className="h-6 w-6 text-accent flex-shrink-0 mt-0.5" />
+                <div>
+                  <p className="text-sm font-bold text-dark">{ai.title}</p>
+                  <p className="text-xs text-gray-500 mt-1">
+                    {ai.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+
           <div className="bg-primary/5 border border-primary/20 rounded-2xl p-6 text-center">
             <p className="text-lg font-bold text-dark">
               <span className="font-data text-primary">&#8377;16,000</span>{" "}
@@ -539,8 +780,8 @@ export default function ProductPage() {
               Siemens PLC
             </p>
             <p className="text-sm text-gray-600 mt-1">
-              Indian-assembled ESP32 IoT gateway with identical functionality.
-              77% cost saving.
+              Indian-assembled ESP32 IoT gateway with edge ML inference.
+              77% cost saving. Models run at the edge — no cloud required.
             </p>
           </div>
         </div>
@@ -627,6 +868,87 @@ export default function ProductPage() {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </Section>
+
+      {/* ── THE SCIENCE BEHIND JALBOX ── */}
+      <Section variant="light">
+        <SectionHeader>
+          <Badge variant="primary" className="mb-4">
+            <BookOpen className="h-3 w-3 mr-1" />
+            Academic Foundation
+          </Badge>
+          <SectionTitle>The Science Behind JalBox</SectionTitle>
+          <SectionDescription>
+            JalBox technology is built on the shoulders of global wastewater
+            research, adapted for Indian conditions and materials. Every design
+            decision has published evidence.
+          </SectionDescription>
+        </SectionHeader>
+
+        <div className="max-w-4xl mx-auto">
+          <div className="grid sm:grid-cols-2 gap-6">
+            {[
+              {
+                material: "Coconut Coir MBBR Media",
+                finding:
+                  "Equivalent biofilm surface area and BOD removal performance compared to imported PE plastic media, at 87% lower cost.",
+                field: "Biological Wastewater Treatment",
+              },
+              {
+                material: "Coconut Shell Biochar",
+                finding:
+                  "84–93% organic removal and 89% nitrate removal. Regenerable through thermal treatment. Effective against pharmaceuticals and emerging contaminants.",
+                field: "Adsorption & Emerging Contaminants",
+              },
+              {
+                material: "Solar TiO₂ Photocatalysis",
+                finding:
+                  "93–100% removal of metals and organics via solar-activated hydroxyl radicals. Zero electricity, zero consumables required.",
+                field: "Advanced Oxidation Processes",
+              },
+              {
+                material: "Chitosan Biosorbent",
+                finding:
+                  "Effective heavy metal capture via ion exchange and chelation. Sourced from Indian coastal seafood waste — abundant and renewable.",
+                field: "Biosorbent Heavy Metal Removal",
+              },
+              {
+                material: "Edge AI/ML on ESP32",
+                finding:
+                  "15–25% energy reduction through adaptive dissolved oxygen optimisation. Predictive maintenance reduces downtime by detecting faults before failure.",
+                field: "AI Applications in Wastewater",
+              },
+              {
+                material: "Electrocoagulation",
+                finding:
+                  "97%+ removal of turbidity and petroleum hydrocarbons using aluminium electrodes. Effective pre-treatment for industrial co-treatment loads.",
+                field: "Hybrid Treatment Systems",
+              },
+            ].map((research) => (
+              <Card key={research.material} className="p-6">
+                <div className="flex items-center gap-2 mb-3">
+                  <FlaskConical className="h-5 w-5 text-primary flex-shrink-0" />
+                  <h3 className="font-bold text-dark">{research.material}</h3>
+                </div>
+                <p className="text-sm text-gray-600 leading-relaxed mb-3">
+                  {research.finding}
+                </p>
+                <Badge variant="water" className="text-xs">
+                  {research.field}
+                </Badge>
+              </Card>
+            ))}
+          </div>
+
+          <div className="mt-8 p-6 rounded-2xl bg-primary/5 border border-primary/10 text-center">
+            <p className="text-sm text-gray-700">
+              Research sourced from peer-reviewed publications in energy,
+              environmental engineering, and water research journals (2024–2025).
+              JalBox adapts global findings for Indian materials, conditions, and
+              supply chains.
+            </p>
           </div>
         </div>
       </Section>

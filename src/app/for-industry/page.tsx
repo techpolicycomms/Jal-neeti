@@ -16,6 +16,11 @@ import {
   ShieldCheck,
   BarChart3,
   Handshake,
+  Beaker,
+  Zap,
+  Shield,
+  FlaskConical,
+  CheckCircle,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -311,7 +316,83 @@ export default function ForIndustryPage() {
         </div>
       </Section>
 
-      {/* 5. THE CIRCULAR DEAL */}
+      {/* 5. INDUSTRIAL WASTEWATER CAPABILITY */}
+      <Section variant="dark">
+        <SectionHeader>
+          <Badge variant="accent" className="mb-4">
+            <FlaskConical className="h-3 w-3 mr-1" />
+            Industrial Capability
+          </Badge>
+          <SectionTitle>Beyond Domestic Sewage</SectionTitle>
+          <SectionDescription>
+            JalBox Industrial models include electrocoagulation pre-treatment,
+            biochar adsorption, and chitosan biosorbent cartridge for light
+            industrial wastewater — validated by peer-reviewed research.
+          </SectionDescription>
+        </SectionHeader>
+
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto mb-12">
+          {[
+            {
+              icon: Zap,
+              title: "Electrocoagulation Pre-Treatment",
+              description:
+                "Aluminium electrode unit removes oil, grease, turbidity, and petroleum traces before biological treatment. 97%+ turbidity removal.",
+            },
+            {
+              icon: Beaker,
+              title: "Biochar Adsorption Column",
+              description:
+                "Coconut shell biochar captures pharmaceutical residues, heavy metals, and emerging contaminants — critical for factories near residential areas.",
+            },
+            {
+              icon: Shield,
+              title: "Chitosan Biosorbent Cartridge",
+              description:
+                "Modular chitosan insert for heavy metal capture via ion exchange. Sourced from Indian coastal seafood waste. Swappable cartridge design.",
+            },
+          ].map((item) => (
+            <div
+              key={item.title}
+              className="rounded-2xl bg-card border border-white/10 p-6"
+            >
+              <item.icon className="h-8 w-8 text-accent-light mb-3" />
+              <h3 className="text-lg font-bold text-white mb-2">
+                {item.title}
+              </h3>
+              <p className="text-sm text-gray-400 leading-relaxed">
+                {item.description}
+              </p>
+            </div>
+          ))}
+        </div>
+
+        <div className="max-w-4xl mx-auto">
+          <h3 className="text-lg font-bold text-white text-center mb-6">
+            Can Co-Treat
+          </h3>
+          <div className="flex flex-wrap items-center justify-center gap-3">
+            {[
+              "Textile effluent",
+              "Food processing wastewater",
+              "Electroplating rinse water",
+              "Pharmaceutical waste",
+              "Petroleum traces",
+              "Light chemical effluent",
+            ].map((type) => (
+              <div
+                key={type}
+                className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10"
+              >
+                <CheckCircle className="h-4 w-4 text-accent-light" />
+                <span className="text-sm text-gray-300">{type}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </Section>
+
+      {/* 6. THE CIRCULAR DEAL */}
       <Section variant="dark">
         <SectionHeader>
           <Badge variant="accent" className="mb-4">

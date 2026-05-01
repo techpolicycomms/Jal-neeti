@@ -444,6 +444,25 @@ export default function CSRPage() {
                   One investment, two compliance boxes checked.
                 </strong>
               </p>
+              <div className="mt-6 space-y-3 text-left max-w-lg mx-auto">
+                <div className="flex items-start gap-3 text-sm text-gray-600">
+                  <Shield className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                  <span>
+                    The biochar adsorption column ensures factory wastewater
+                    contaminants (metals, chemicals, pharmaceuticals) are captured
+                    before treated water reaches the community — safety built into
+                    the design.
+                  </span>
+                </div>
+                <div className="flex items-start gap-3 text-sm text-gray-600">
+                  <Wifi className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                  <span>
+                    AI-driven quality monitoring means your CSR dashboard shows
+                    real-time proof that treated water meets CPCB norms — edge ML
+                    on every unit, even offline.
+                  </span>
+                </div>
+              </div>
               <div className="mt-8">
                 <Link href="/contact?category=partnership">
                   <Button variant="accent" size="lg">
